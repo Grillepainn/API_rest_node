@@ -1,0 +1,17 @@
+{
+    "rootAPI": "/api/v1/",
+    "port": 8080,
+    "db": {
+        "host": "localhost",
+        "database": "nodejs",
+        "user": "root",
+        "password": ""
+    },
+    "errors" : {
+        "wrongID" : "wrong id",
+        "wrongMaxValue": "wrong max value",
+        "wrongAlreadyTaken": "name already taken",
+        "wrongNoNameValue": "no name value",
+        "wrongSameName": "same name"
+    }
+}

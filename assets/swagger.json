@@ -1,0 +1,140 @@
+{
+    "info": {
+      "title": "API REST Documention",
+      "version": "1.0.0",
+      "license": {
+        "name": "ISC"
+      },
+      "description": "API REST pour gérer des utilisateurs"
+    },
+    "paths": {
+      "/api/v1/members/{id}": {
+        "get": {
+          "summary": "/api/v1/members/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {}
+        },
+        "delete": {
+          "summary": "/api/v1/members/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {}
+        }
+      },
+      "/api/v1/members": {
+        "get": {
+          "summary": "/api/v1/members",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "success"
+                  },
+                  "result": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "name"
+                      ]
+                    },
+                    "example": [
+                      {
+                        "id": 1,
+                        "name": "John"
+                      },
+                      {
+                        "id": 3,
+                        "name": "Patrick"
+                      },
+                      {
+                        "id": 4,
+                        "name": "Patrick"
+                      },
+                      {
+                        "id": 5,
+                        "name": "Patrick"
+                      },
+                      {
+                        "id": 7,
+                        "name": "Patrick"
+                      },
+                      {
+                        "id": 8,
+                        "name": "Julie"
+                      },
+                      {
+                        "id": 9,
+                        "name": "Julie"
+                      },
+                      {
+                        "id": 10,
+                        "name": "Luca"
+                      },
+                      {
+                        "id": 11,
+                        "name": "Luca"
+                      },
+                      {
+                        "id": 12,
+                        "name": "Luca"
+                      },
+                      {
+                        "id": 13,
+                        "name": "Fred"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "produces": [
+            "application/json"
+          ]
+        },
+        "post": {
+          "summary": "/api/v1/members",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {}
+        }
+      }
+    },
+    "swagger": "2.0"
+  }
